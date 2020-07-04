@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:shopapp/providers/cart.dart';
 import 'package:shopapp/screens/product_detail_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shopapp/models/product.dart';
@@ -17,6 +18,7 @@ class ProductItem extends StatelessWidget {
     // final product = Provider.of<Product>(context); alternat will be consumer
 
     final product = Provider.of<Product>(context, listen: false);
+    final cart = Provider.of<Cart>(context,listen: false);
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
@@ -38,7 +40,7 @@ class ProductItem extends StatelessWidget {
         footer: GridTileBar(
           backgroundColor: Colors.black87,
           //another way of listening
-          leading: Consumer<Product>(
+          leading: Consumer<Product>( // using consumer to listen when listen is false in provider
             builder: (ctx, product, child) => IconButton(
               icon: Icon(
                   product.isFavorite ? Icons.favorite : Icons.favorite_border),
@@ -57,7 +59,16 @@ class ProductItem extends StatelessWidget {
           ),
           trailing: IconButton(
             icon: Icon(Icons.shopping_cart),
-            onPressed: () {},
+            onPressed: () {
+              cart.addItem(product.id, product.price, product.title);
+              //Scaffold.of(context).openDrawer(); //can open drawer
+                Scaffold.of(context).hideCurrentSnackBar();
+                Scaffold.of(context).showSnackBar(SnackBar(content: Text('Added item to cart!'),
+                duration: Duration(seconds: 2),action: SnackBarAction(label: 'UNDO',onPressed: (){
+                  cart.removeSingleItem(product.id);
+                  
+                  },),));
+            },
             color: Theme.of(context).accentColor,
           ),
         ),

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/gaurav/Videos/Flutter/shop_app_2/shop_app/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml",
+            "outputFile": "/home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
-                    "source": "/home/gaurav/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/res/values-pt-rBR/values-pt-rBR.xml",
+                    "source": "/home/gaurav/.gradle/caches/transforms-2/files-2.1/805e05a71e209033ab91722f2d3217f8/core-1.1.0/res/values-pt-rBR/values-pt-rBR.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
