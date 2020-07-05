@@ -1,9 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-
 import 'package:flutter/rendering.dart';
 import 'package:shopapp/providers/orders.dart' as ord;
-
 import 'package:intl/intl.dart';
 
 class OrderItem extends StatefulWidget {
