@@ -19,13 +19,17 @@ class OrderItem {
 
 class Orders with ChangeNotifier {
   List<OrderItem> _orders = [];
+  final String authToken;
+  final String userId;
+
+  Orders(this.authToken,this.userId,this._orders);
 
   List<OrderItem> get orders {
     return [..._orders];
   }
 
   Future<void> addOrders(List<CartItem> cartProducts, double total) async {
-    const url = 'https://myflutterapp-1e3db.firebaseio.com/orders.json';
+    final url = 'https://myflutterapp-1e3db.firebaseio.com/orders/$userId.json?auth=$authToken';
     final timeStamp = DateTime.now();
     final response = await http.post(url,
         body: json.encode({
@@ -52,11 +56,11 @@ class Orders with ChangeNotifier {
   }
 
   Future<void> fetchAndSetOrders() async {
-    const url = 'https://myflutterapp-1e3db.firebaseio.com/orders.json';
+    final url = 'https://myflutterapp-1e3db.firebaseio.com/orders/$userId.json?auth=$authToken';
     final response = await http.get(url);
     final List<OrderItem> loadedOrders = [];
     final extractData = json.decode(response.body) as Map<String, dynamic>;
-    if(extractData == null){
+    if (extractData == null) {
       return;
     }
     extractData.forEach((orderId, orderData) {
@@ -64,12 +68,13 @@ class Orders with ChangeNotifier {
         OrderItem(
           id: orderId,
           amount: orderData['amount'],
-          products: (orderData['products'] as List<dynamic>).map((item) =>
-              CartItem(
+          products: (orderData['products'] as List<dynamic>)
+              .map((item) => CartItem(
                   id: item['id'],
                   price: item['price'],
                   quantity: item['quantity'],
-                  title: item['title'])).toList(),
+                  title: item['title']))
+              .toList(),
           dateTime: DateTime.parse(orderData['dateTime']),
         ),
       );

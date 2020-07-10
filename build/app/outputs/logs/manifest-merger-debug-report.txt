@@ -5,6 +5,7 @@ INJECTED from /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/android/ap
 INJECTED from /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
 INJECTED from /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
 MERGED from /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/android/app/src/main/AndroidManifest.xml:1:1-47:12
+MERGED from [:shared_preferences] /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/gaurav/.gradle/caches/transforms-2/files-2.1/e5251890cd512fd62773fbd951ff5f31/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.0.0] /home/gaurav/.gradle/caches/transforms-2/files-2.1/8ae45bb84bb1c49dd3696485da8c440a/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/gaurav/.gradle/caches/transforms-2/files-2.1/6b075bc6af254a12c3a2aa3ea7d7e3a4/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -95,6 +96,8 @@ uses-sdk
 INJECTED from /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/android/app/src/main/AndroidManifest.xml
+MERGED from [:shared_preferences] /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /home/gaurav/Videos/Flutter/shop_git_22june2020/shopApp/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /home/gaurav/.gradle/caches/transforms-2/files-2.1/e5251890cd512fd62773fbd951ff5f31/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /home/gaurav/.gradle/caches/transforms-2/files-2.1/e5251890cd512fd62773fbd951ff5f31/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /home/gaurav/.gradle/caches/transforms-2/files-2.1/8ae45bb84bb1c49dd3696485da8c440a/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
